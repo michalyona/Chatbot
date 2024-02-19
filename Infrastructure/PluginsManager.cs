@@ -11,6 +11,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ReversingSentence;
+
 
 namespace Infrastructure
 {
@@ -49,8 +51,11 @@ namespace Infrastructure
             {
                 return new CountWordPlugin();
             }
+            else if(id== ReversingSentencePlugin._Id)
+            {
+                return new ReversingSentencePlugin();
+            }
             else
-
             {
                 throw new NotImplementedException();
             }
@@ -64,7 +69,8 @@ namespace Infrastructure
             EchoPlugin._Id,
             ListPlugin.ListPlugin._Id,
             CountTheWordsPlugin._Id,
-            CountWordPlugin._Id
+            CountWordPlugin._Id,
+            ReversingSentencePlugin._Id
         };
     }
 }
